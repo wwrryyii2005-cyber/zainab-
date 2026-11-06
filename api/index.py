@@ -1,3 +1,7 @@
-from server import app
+import sys
+import os
 
-# Vercel سيقوم بالتعرف على متغير app مباشرة كـ ASGI application
+# إضافة المجلد الرئيسي للمشروع لمسار البحث لكي يتمكن من قراءة server.py
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from server import app
