@@ -1,17 +1,15 @@
 {
+  "version": 2,
   "builds": [
     {
-      "src": "server.py",
+      "src": "api/index.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "server.py"
+      "dest": "api/index.py"
     }
-  ],
-  "env": {
-    "PYTHON_VERSION": "3.12"
-  }
+  ]
 }
